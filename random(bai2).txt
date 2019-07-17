@@ -1,0 +1,17 @@
+import random
+#tong so lan bung dong xu
+total_flips = 0
+#tong so lan mat sau xuat hien
+total_tails = 0
+#tong so lan mat truoc xuat hien
+total_heads = 0
+for i in range(1000):
+  n=random.random()
+  if(n >= 0 and n < 0.5 ):
+    total_tails += 1
+  else :
+    total_heads += 1
+  total_flips +=1
+print("total_flips: %d" % total_flips)
+print('total_tails: %d' % total_tails)
+print("total_heads: %d" % total_heads)  
