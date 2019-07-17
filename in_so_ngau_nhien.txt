@@ -1,0 +1,7 @@
+import random
+while True:
+  num = random.randint(1,10)
+  if num != 5:
+    print("so ngau nhien la :",num )
+    break
+     
