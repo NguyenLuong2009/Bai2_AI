@@ -1,0 +1,19 @@
+import random
+import math
+# tong so diem duoc sinh ra
+N = 10000
+# so diem thuoc hinh tron 
+N_T = 0
+# sinh ra N diem ngau nhien
+for i in range(N):
+  #sinh ra cac toa do x,y nam trong [-1,1]
+  x = random.uniform(-1,1)
+  y = random.uniform(-1,1)
+  x2 = x**2
+  y2 = y**2
+  #kiem tra p co nam trong duong tron
+  if math.sqrt(x2 + y2) <= 1:
+    N_T +=  1
+#tinh pi
+pi = (N_T/N)*4
+print(pi)
