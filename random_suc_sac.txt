@@ -1,0 +1,32 @@
+import random
+# totals appear dice 1,2,3,4,5,6
+num_dice_1 = 0
+num_dice_2 = 0
+num_dice_3 = 0
+num_dice_4 = 0
+num_dice_5 = 0
+num_dice_6 = 0
+# totals dice
+total_dice = 0
+for _ in range(10000):
+  n = random.randint(1,6)
+  if n == 1:
+    num_dice_1 += 1
+  elif n == 2:
+    num_dice_2 += 1
+  elif n == 3:
+    num_dice_3 += 1
+  elif n == 4:
+    num_dice_4 += 1
+  elif n == 5:
+    num_dice_5 += 1
+  elif n == 6:
+    num_dice_6 += 1
+  total_dice += 1
+print("num_dice_1:%d" % num_dice_1)
+print("num_dice_2:%d" % num_dice_2)
+print("num_dice_3:%d" % num_dice_3)
+print("num_dice_4:%d" % num_dice_4)
+print("num_dice_5:%d" % num_dice_5)
+print("num_dice_6:%d" % num_dice_6)
+print("total_dice:%d" % total_dice)
