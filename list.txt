@@ -1,0 +1,47 @@
+#khoi tao 1 danh sach
+my_list = [1,0,4,6,7,9,5,2]
+# truy cap danh sach 
+print(my_list[3])
+print(my_list[-1])
+# cat (slicing)
+print(my_list[1:3])
+# thay doi gia tri cua phan tu trong danh sach
+my_list[3]=5
+print(my_list)
+#them phan tu moi vao cuoi danh sach 
+my_list.append(3)
+print(my_list)
+#ket noi 2 danh sach 
+my_data_1 = [1,2,3]
+my_data_2 = [0,7]
+my_data = my_data_1+my_data_2
+print(my_data)
+my_data_k = my_data_2 * 2
+print(my_data_k)
+#chen them 1 phan tu
+my_list.insert(0,2)
+print(my_list)
+#xoa phan tu khoi danh sach 
+del my_list[1:4]
+print(my_list)
+#xoa phan tu tai 1 vi tri cho truoc
+my_list.pop(2)
+print(my_list)
+#xoa phan tu co gia tri 5 dau tien
+my_list.remove(5)
+print(my_list)
+#tra ve vi tri xuat hien so 5 lan dau
+print(my_list.index(5))
+#tra ve so lan xuat hien cua phan tu 2
+print(my_list.count(2))
+#sap xep cac phan tu theo thu tu tang dan
+print(my_list.sort())
+#sap xep cac phan tu theo thu tu giam dan
+print(my_list.sort(reverse = True))
+#dao nguoc vi tri cua cac phan tu
+print(my_list.reverse())
+#copy list
+my_list_copy = my_list.copy()
+print(my_list_copy)
+#xoa list
+print(my_list.clear())
