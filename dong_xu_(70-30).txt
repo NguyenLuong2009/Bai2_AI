@@ -1,0 +1,27 @@
+import random
+
+# Tong so lan bung dong xu
+total_flips = 0  
+
+# so lan mat sau xuat hien
+num_tails = 0
+
+# so lan mat truoc xuat hien
+num_heads = 0
+
+for _ in range(1000):
+    # sinh ra so ngau nhien trong [0,1)
+    n = random.random()
+    if n < 0.7:
+        num_tails = num_tails + 1
+    else:
+        num_heads = num_heads + 1
+    
+     
+    total_flips = total_flips + 1
+print('total_flips: %d' % total_flips)
+print('num_tails: %d' % num_tails)
+print('num_heads: %d' % num_heads)
+
+
+  
