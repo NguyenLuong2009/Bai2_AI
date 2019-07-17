@@ -1,0 +1,16 @@
+import math
+#xay dung ham tinh giai thua
+def factorial(n):
+  if n == 1:
+    return 1
+  else:
+    return n*factorial(n-1)
+#ham uoc luong so e
+def estimate_e(n):
+  result = 1
+  for i in range(1,n+1):
+    result = result + 1/factorial(i)
+  return result
+#uoc luong so e voi n = 10
+print(estimate_e(10))
+    
