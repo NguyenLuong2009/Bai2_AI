@@ -1,0 +1,14 @@
+import math
+#xay dung ham ELU voi anpha = 0.1
+def ELU_fuction(data):
+  result = []
+  for k in data:
+    if k < 0:
+      result.append(0.1*(math.exp(k)-1))
+    else:
+      result.append(k)
+  return result
+my_list = [1.0,5.0,-4.0,3.0,-2.0]
+u = ELU_fuction(my_list)
+print(u)
+    
