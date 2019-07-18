@@ -1,0 +1,10 @@
+import math
+# xay dung Ct ham ReLU
+def ReLU_fuction(data):
+  result = []
+  for k in data:
+    result.append((abs(k)+k)/2)
+  return result
+my_list = [1.0,5.0,-4.0,3.0,-2.0]
+u = ReLU_fuction(my_list)
+print(u)
