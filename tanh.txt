@@ -1,0 +1,10 @@
+import math
+#xay dung cong thuc tinh ham tanh
+def tanh_fuction(data):
+  result = []
+  for k in data:
+    result.append(2/(1+math.exp(-2*k))-1)
+  return result
+my_list = [1,5,-4,3,-2]
+u = tanh_fuction(my_list)
+print(u)
