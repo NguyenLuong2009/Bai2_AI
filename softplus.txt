@@ -1,0 +1,10 @@
+import math
+# xay dung cong thuc ham softplus
+def softplus_fuction(data):
+  result = []
+  for k in data:
+    result.append(math.log(1+math.exp(k),math.e))
+  return result
+my_list = [1.0,5.0,-4.0,3.0,-2.0]
+u = softplus_fuction(my_list)
+print(u)
