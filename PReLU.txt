@@ -1,0 +1,15 @@
+import math
+#xay dung cong thuc tinh ham PReLU voi anpha=0.1
+def PReLu_fuction(data):
+  result = []
+  for k in data:
+    if k < 0:
+      result.append(0.1*k)
+    else:
+      result.append(k)
+  return result
+my_list = [1.0,5.0,-4.0,3.0,-2.0]
+u = PReLu_fuction(my_list)
+print(u)
+    
+  
