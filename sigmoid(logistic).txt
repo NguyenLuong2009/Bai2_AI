@@ -1,0 +1,10 @@
+import math
+#xay dung ham sigmoid(logistic)
+def sigmoid_fuction(data):
+  result = []
+  for k in data:
+    result.append(1/(1+math.exp(-k)))
+  return result
+my_list = [1,2,3,4,5]
+u = sigmoid_fuction(my_list)
+print(u)
