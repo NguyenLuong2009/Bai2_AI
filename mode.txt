@@ -1,0 +1,21 @@
+#import package Counter tinh so lan xuat hien cua moi phan tu trong day
+from collections import Counter
+
+#data
+points = [1,2,3,4,4,4,5,5,6,7,8,9,0,8,9,5,1]
+
+#xay dung ham tinh mode
+def culculate_mode(numbers):
+  c = Counter(numbers)
+  most_freq = c.most_common()
+  max_count = most_freq[0][1]
+  mode = []
+  
+# kiem tra xem con phan tu nao cung co cung so lan xuat hien khong
+  for num in most_freq:
+    if num[1] == max_count:
+      mode.append(num[0])
+  return mode
+
+# hien thi ket qua ra man hinh
+print("mode la :",culculate_mode(points))
