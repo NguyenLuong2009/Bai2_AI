@@ -1,0 +1,10 @@
+#range of data
+def find_range(numbers):
+  lowest = min(numbers)
+  highest = max(numbers)
+  r = highest - lowest
+  print("lowest:{0}\thighest:{1}\trange:{2}".format(lowest,highest,r))
+
+#data
+numbers = [1,2,3,4,5,3,7,0,6,5,2,1]
+find_range(numbers)
