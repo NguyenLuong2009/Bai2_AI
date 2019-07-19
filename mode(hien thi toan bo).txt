@@ -1,0 +1,18 @@
+# import package tinh so lan xuat hien cua phan tu trong day
+from collections import Counter
+
+# data
+points = [1,2,3,4,4,5,6,7,8,9,9,7,5,3,2]
+
+#xay dung ham tinh mode
+def culculate_mode(numbers):
+  table = Counter(numbers)
+  table_freq = table.most_common()
+  table_freq.sort()
+  print("Number\tFrequence")
+  for number in table_freq:
+    print("{0}\t{1}".format(number[0],number[1]))
+    
+# hien thi ket qua 
+culculate_mode(points)
+  
