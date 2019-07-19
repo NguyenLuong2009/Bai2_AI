@@ -1,0 +1,30 @@
+# Variance (phuong sai)
+
+#data
+points = [1,2,3,4,3,7,9,7,2,6,2,4,9,8]
+# tinh mean (gia tri trung binh)
+def calculate_mean(numbers):
+  N = len(numbers)
+  S = sum(numbers)
+  mean = S/N
+  return mean
+
+# xay dung ham tinh Var
+def calculate_variance(numbers):
+
+  mean = calculate_mean(numbers)
+  diff = [] # xi-x
+  for num in numbers:
+    diff.append(num-mean)
+    
+  squared_diff = [] # (xi-x)**2
+  for d in diff:
+    squared_diff.append(d**2)
+    sum_squared_diff = sum(squared_diff)
+    variance = sum_squared_diff/len(numbers)
+    
+  return variance
+
+# hien thi ket qua ra man hinh
+print('phuong sai la :',calculate_variance(points))
+print('do lech chuan la :',(calculate_variance(points))**0.5)
