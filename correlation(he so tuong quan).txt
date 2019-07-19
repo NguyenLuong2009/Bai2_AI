@@ -1,0 +1,55 @@
+
+# xay dung ham tinh correlation coefeccient
+def find_corr_x_y(x,y):
+  n = len(x)
+  # tinh gia tri trung binh cua x
+  s_x = sum(x)
+  mean_x = s_x/n
+  
+  # tinh gia tri trung binh cua y
+  s_y = sum(y)
+  mean_y = s_y/n
+  
+  # tinh gia tri cua xi-x va luu vao diff
+  diff_x = []
+  for num in x:
+    diff_x.append(num-mean_x)
+    
+  # tinh gia tri cua xi-x va luu vao diff
+  diff_y = []
+  for num in y:
+    diff_y.append(num-mean_y)
+    
+  # tinh tu so (numerator)
+  prod = []
+  for xi,yi in zip(diff_x,diff_y):
+    prod.append(xi*yi)
+  r_numerator = sum(prod)
+  
+  # tinh binh phuong (x-xi)
+  diff_x_2 = []
+  for d in diff_x:
+    diff_x_2.append(d**2)
+    sum_x_2 = sum(diff_x_2)
+    
+  # tinh binh phuong (y-yi)
+  diff_y_2 = []
+  for d in diff_y:
+    diff_y_2.append(d**2)
+    sum_y_2 = sum(diff_y_2)
+    
+  # tinh mau so (denominator)
+  k = sum_x_2*sum_y_2
+  r_denominator = k**0.5
+  
+  #ket qua 
+  r = r_numerator/r_denominator
+  print(r)
+
+#data
+x = [7,18,29,2,10,9,9]
+y = [1,6,12,8,6,21,10]
+
+# hien thi ket qua 
+find_corr_x_y(x,y)
+
