@@ -1,0 +1,31 @@
+import random
+
+# khai bao
+n_1,n_2,n_3,n_4,n_5,n_6,n_7,n_8,n_9 = 0,0,0,0,0,0,0,0,0
+
+for _ in range(1000):
+  # sinh ra so ngau nhien trong khoang [0,1)
+  n = random.random()
+  if n < 1/45:
+    n_1 += 1
+  elif 1/45 <= n < 3/45:
+    n_2 += 1
+  elif 3/45 <= n < 6/45:
+    n_3 += 1
+  elif 6/45 <= n < 10/45:
+    n_4 += 1
+  elif 10/45 <= n < 15/45:
+    n_5 += 1
+  elif 15/45 <= n < 21/45:
+    n_6 += 1
+  elif 21/45 <= n < 28/45:
+    n_7 += 1
+  elif 28/45 <= n < 36/45:
+    n_8 += 1
+  else:
+    n_9 += 1
+n = n_1+n_2+n_3+n_4+n_5+n_6+n_7+n_8+n_9
+# hien thi ket qua 
+print ("n ={0}\t n_1 ={1}\t n_2 ={2}\t n_3 ={3}\t n_4 ={4} ".format(n,n_1,n_2,n_3,n_4))
+print ("n_5 ={0}\tn_6 ={1}\tn_7 ={2}\tn_8 ={3}\tn_9 ={4} ".format(n_5,n_6,n_7,n_8,n_9))
+
